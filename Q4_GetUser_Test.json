@@ -1,0 +1,8 @@
+pm.test("Status 200", function () {
+    pm.response.to.have.status(200);
+});
+
+let res = pm.response.json();
+
+pm.expect(res.data.email).to.eql("janet.weaver@reqres.in");
+pm.expect(res.data.first_name).to.eql("Janet");
